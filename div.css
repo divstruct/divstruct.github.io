@@ -5,23 +5,48 @@
 }
 
 body {
-    height: 40vw;
-    background-image: url(https://scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/291767948_560575849058358_6706585029555233888_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=1pBnVMekXFAAX8W-C5A&_nc_ht=scontent.fceb1-2.fna&oh=03_AVIvAszJW4R7Pv4dxa9F46iYojOPnc6AeDXTCPTWfDCgvA&oe=62FD567B);
-    background-repeat: no-repeat;
-    background-position:center;
-    background-color: #262626;
     font-family: monospace;
+    background-color: #262626;
+}
+
+#mainbody {
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+    "pic1 pic2"
+    "h1 h1";
+    margin-top: 5vw;
+}
+
+#mainbody > img {
+    height: 25vw;
+}
+
+#mainbody .pic1 {
+    justify-self: end;
+    width: 30vw;
+    height: 18vw;
+}
+
+#mainbody .pic2 {
+    justify-self: start;
+    width: 45vw;
+    height: 30vw;
+}
+
+a, h1{
+    margin-top: 2vw;
+    text-align: center;
+    grid-column: -3 / -1;
 }
 
 h1 {
-    position: fixed;
-    bottom: 2vw;
-    left: 44vw;
     font-size: 2.5vw;
 }
 
 a {
     color: #FFE000;
+    text-decoration: none;
 }
 
 a h1:hover {
@@ -29,27 +54,42 @@ a h1:hover {
     text-decoration: underline;
 }
 
-@media(max-width: 1024px) {
-    body {
-        background-size: cover;
-    }
-
-    h1 {
-        top: 45vw;
-        left: 43vw;
-        font-size: 3vw;
+@media (max-width: 769px) {
+    #mainbody {
+        margin-top: 18%;
     }
 }
 
-@media(max-width: 425px) {
-    body {
-        margin: 20vw 0 0 0;
+@media(max-width: 426px) {
+    #mainbody {
+        display: grid;
+        place-items: center;
+        grid-template-areas: 
+        "pic1"
+        "pic2"
+        "h1";
+        margin-top: 12.5vh;
     }
 
-    h1 {
-        top: 60vw;
-        left: 38vw;
+    #mainbody .pic1 {
+        grid-area: pic1;
+        justify-self: center;
+        width: 60%;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    #mainbody .pic2 {
+        grid-area: pic2;
+        justify-self: center;
+        width: 80%;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    a, h1 {
+        grid-column: 1 / -1;
         font-size: 5vw;
+        margin-top: 5vw;
     }
 }
-
