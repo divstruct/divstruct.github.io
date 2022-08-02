@@ -1,1 +1,0 @@
-# divstruct.github.io
