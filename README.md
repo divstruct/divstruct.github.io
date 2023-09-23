@@ -1,3 +1,3 @@
 # divstruct.github.io
-https://divstruct.github.a/
+https://divstruct.github.io/
 This will be a temporary site for the divstruct while we are fixing the main repo.
